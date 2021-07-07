@@ -1,0 +1,258 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<popup:PopupPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:i18n="clr-namespace:Mynfo.Helpers"
+             xmlns:popup="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup"
+             BackgroundColor="Transparent"
+             BindingContext="{Binding Main, Source={StaticResource Locator}}"
+             x:Class="Mynfo.Views.ProfileTypeSelection">
+    <NavigationPage.TitleView>
+        <Grid>
+            <ImageButton 
+                BackgroundColor = "Transparent"
+                Clicked = "BackHome_Clicked"
+                Margin = "0,0,80,0"
+                HorizontalOptions = "Center"
+                Source = "logo_superior3.png" 
+                VerticalOptions = "Center"
+                WidthRequest = "100"/>
+        </Grid>
+    </NavigationPage.TitleView>
+    <ContentPage.Content>
+        <Frame
+            CornerRadius="50"
+            BackgroundColor="{AppThemeBinding Light={StaticResource BackgroundColorLigth}, Dark={StaticResource BackgroundColorDark}}"
+            HasShadow="True"
+            Margin="30"
+            x:Name="BackG">
+            <Grid
+                BindingContext="{Binding ProfileTypeSelection}">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <!--Titulo-->
+                <ImageButton
+                    BackgroundColor="Transparent"
+                    Command="{Binding GotoAddCommand}"
+                    Grid.RowSpan="2"
+                    HeightRequest="40"
+                    HorizontalOptions="Start"
+                    IsEnabled="true"
+                    Source="lista"
+                    VerticalOptions="Start"
+                    WidthRequest="40"/>
+                <ImageButton
+                    BackgroundColor="Transparent"
+                    Command="{Binding GoBackCommand}"
+                    Grid.RowSpan="2"
+                    HeightRequest="40"
+                    HorizontalOptions="End"
+                    IsEnabled="true"
+                    Source="check3"
+                    VerticalOptions="Start"
+                    WidthRequest="40"/>
+                <Label 
+                    Grid.Row = "0" 
+                    Text = "{i18n:Translate ChooseTypeProfile}"
+                    FontSize = "25"
+                    FontAttributes="Bold"
+                    TextColor = "{StaticResource MainColor}"
+                    HorizontalOptions = "CenterAndExpand"
+                    VerticalOptions = "Start"/>
+                <ScrollView
+                    Grid.Row = "1">
+                    <Grid>
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="0"/>
+                                <RowDefinition Height="100" />
+                                <RowDefinition Height="100" />
+                                <RowDefinition Height="100" />
+                                <RowDefinition Height="100" />
+                                <RowDefinition Height="100" />
+                                <RowDefinition Height="100" />
+                                <RowDefinition Height="100" />
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width=".12*" />
+                                <ColumnDefinition Width=".35*"/>
+                                <ColumnDefinition Width=".06*"/>
+                                <ColumnDefinition Width=".35*"/>
+                                <ColumnDefinition Width=".12*" />
+                            </Grid.ColumnDefinitions>
+
+                            <!--BoxView 1-->
+                            <ImageButton  
+                                BackgroundColor = "Transparent"
+                                Grid.Column = "1"
+                                Grid.Row = "1"
+                                HeightRequest = "150"
+                                HorizontalOptions = "Center"
+                                Source = "mail1.png"   
+                                VerticalOptions = "Center"
+                                WidthRequest = "150"
+                                x:Name="ProfilesEmail"/>
+
+                            <!--BoxView 2-->
+                            <ImageButton 
+                                BackgroundColor = "Transparent"
+                                Grid.Column = "3"
+                                Grid.Row = "1" 
+                                HeightRequest = "150"
+                                HorizontalOptions = "Center"
+                                Source = "tel1.png"
+                                VerticalOptions = "Center"
+                                WidthRequest = "150"
+                                x:Name="ProfilesPhone"/>
+
+                            <!--BoxView 3-->
+                            <ImageButton 
+                               BackgroundColor = "Transparent"
+                                Grid.Column = "1"
+                                Grid.Row = "2" 
+                                HeightRequest = "150"
+                                HorizontalOptions = "Center"
+                                Source = "whatsapp1.png"
+                                VerticalOptions = "Center"
+                                WidthRequest = "150"
+                                x:Name="ProfilesWhatsapp"/>
+
+                            <!--BoxView 4-->
+                            <ImageButton 
+                                BackgroundColor = "Transparent"
+                                Grid.Column = "3"
+                                Grid.Row = "2" 
+                                HeightRequest = "150"
+                                HorizontalOptions = "Center"
+                                Source = "facebook1.png"
+                                VerticalOptions = "Center"
+                                WidthRequest = "150"
+                                x:Name="ProfilesFacebook"/>
+
+                            <!--BoxView 5-->
+                            <ImageButton 
+                                BackgroundColor = "Transparent"
+                                Grid.Column = "1"
+                                Grid.Row = "3" 
+                                HeightRequest = "150"
+                                HorizontalOptions = "Center"
+                                Source = "instagramlogo1.png"
+                                VerticalOptions = "Center"
+                                WidthRequest = "150"
+                                x:Name="ProfilesInstagram"/>
+
+                            <!--BoxView 6-->
+                            <ImageButton 
+                                BackgroundColor = "Transparent"
+                                Grid.Column = "3"
+                                Grid.Row = "3"   
+                                HeightRequest = "150"
+                                HorizontalOptions = "Center"
+                                Source = "twitterlogo1.png"   
+                                VerticalOptions = "Center"
+                                WidthRequest = "150" 
+                                x:Name="ProfilesTwitter"/>
+
+                            <!--BoxView 7-->
+                            <ImageButton 
+                                BackgroundColor = "Transparent"
+                                Grid.Column = "1"
+                                Grid.Row = "4" 
+                                HeightRequest = "150"
+                                HorizontalOptions = "Center"
+                                Source = "linkedin1.png"
+                                VerticalOptions = "Center"
+                                WidthRequest = "150"
+                                x:Name="ProfilesLinkedin"/>
+
+                            <!--BoxView 8-->
+                            <ImageButton 
+                                BackgroundColor = "Transparent"
+                                Grid.Column = "3"
+                                Grid.Row = "4"   
+                                HeightRequest = "150"
+                                HorizontalOptions = "Center"
+                                Source = "tiktok1.png"   
+                                VerticalOptions = "Center"
+                                WidthRequest = "150" 
+                                x:Name="ProfilesTiktok"/>
+
+                            <!--BoxView 9-->
+                            <ImageButton 
+                                BackgroundColor = "Transparent"
+                                Grid.Column = "1"
+                                Grid.Row = "5" 
+                                HeightRequest = "150"
+                                HorizontalOptions = "Center"
+                                Source = "snapchat1.png"
+                                VerticalOptions = "Center"
+                                WidthRequest = "150" 
+                                x:Name="ProfilesSnapchat"/>
+
+                            <!--BoxView 10-->
+                            <ImageButton 
+                                BackgroundColor = "Transparent"
+                                Grid.Column = "3"
+                                Grid.Row = "5"   
+                                HeightRequest = "150"
+                                HorizontalOptions = "Center"
+                                Source = "spotify1.png"   
+                                VerticalOptions = "Center"
+                                WidthRequest = "150" 
+                                x:Name="ProfilesSpotify"/>
+
+                            <!--BoxView 11-->
+                            <ImageButton 
+                                BackgroundColor = "Transparent"
+                                Grid.Column = "1"
+                                Grid.Row = "6"   
+                                HeightRequest = "150"
+                                HorizontalOptions = "Center"
+                                Source = "youtube1.png"   
+                                VerticalOptions = "Center"
+                                WidthRequest = "150" 
+                                x:Name="ProfilesYoutube"/>
+
+                            <!--BoxView 12-->
+                            <ImageButton 
+                                BackgroundColor = "Transparent"
+                                Grid.Column = "3"
+                                Grid.Row = "6"   
+                                HeightRequest = "150"
+                                HorizontalOptions = "Center"
+                                Source = "twitch1.png"   
+                                VerticalOptions = "Center"
+                                WidthRequest = "150" 
+                                x:Name="ProfilesTwitch"/>
+
+                            <!--BoxView 13-->
+                            <ImageButton 
+                                BackgroundColor = "Transparent"
+                                Grid.Column = "1"
+                                Grid.Row = "7" 
+                                HeightRequest = "150"
+                                HorizontalOptions = "Center"
+                                Source = "gmail1.png"
+                                VerticalOptions = "Center"
+                                WidthRequest = "150"
+                                x:Name="ProfilesWebPage"/>
+
+                            <!--BoxView 14-->
+                            <!--<ImageButton 
+                                BackgroundColor = "Transparent"
+                                Grid.Column = "3"
+                                Grid.Row = "7" 
+                                HeightRequest = "150"
+                                HorizontalOptions = "Center"
+                                Source = "skype1.png"
+                                VerticalOptions = "Center"
+                                WidthRequest = "150" />-->
+                        </Grid>
+                    </Grid>
+                </ScrollView>
+            </Grid>
+        </Frame>
+
+    </ContentPage.Content>
+</popup:PopupPage>

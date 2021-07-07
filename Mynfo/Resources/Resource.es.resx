@@ -1,0 +1,753 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Accept" xml:space="preserve">
+    <value>Aceptar</value>
+  </data>
+  <data name="EmailPlaceHolder" xml:space="preserve">
+    <value>Ingresa tu email.</value>
+  </data>
+  <data name="EmailValidation" xml:space="preserve">
+    <value>Debes ingresar un email</value>
+  </data>
+  <data name="Error" xml:space="preserve">
+    <value>Error</value>
+  </data>
+  <data name="PasswordValidation" xml:space="preserve">
+    <value>Debes ingresar una contraseña.</value>
+  </data>
+  <data name="Rememberme" xml:space="preserve">
+    <value>Recordarme en este dispositivo</value>
+  </data>
+  <data name="SomethingWrong" xml:space="preserve">
+    <value>Algo anda mal con los servicios, por favor intenta más tarde.</value>
+  </data>
+  <data name="Login" xml:space="preserve">
+    <value>Ingresar</value>
+  </data>
+  <data name="EMail" xml:space="preserve">
+    <value>Correo:</value>
+  </data>
+  <data name="Password" xml:space="preserve">
+    <value>Contraseña</value>
+  </data>
+  <data name="PasswordPlaceHolder" xml:space="preserve">
+    <value>Ingresa tu contraseña</value>
+  </data>
+  <data name="Forgot" xml:space="preserve">
+    <value>¿Olvidaste tu contraseña?</value>
+  </data>
+  <data name="Register" xml:space="preserve">
+    <value>Registrarse</value>
+  </data>
+  <data name="Search" xml:space="preserve">
+    <value>Buscar.</value>
+  </data>
+  <data name="Countries" xml:space="preserve">
+    <value>Países</value>
+  </data>
+  <data name="Country" xml:space="preserve">
+    <value>País</value>
+  </data>
+  <data name="Information" xml:space="preserve">
+    <value>Información</value>
+  </data>
+  <data name="Capital" xml:space="preserve">
+    <value>Capital:</value>
+  </data>
+  <data name="Population" xml:space="preserve">
+    <value>Población:</value>
+  </data>
+  <data name="Area" xml:space="preserve">
+    <value>Área:</value>
+  </data>
+  <data name="AlphaCode2" xml:space="preserve">
+    <value>Código 2 Car:</value>
+  </data>
+  <data name="AlphaCode3" xml:space="preserve">
+    <value>Código 3 Car:</value>
+  </data>
+  <data name="Region" xml:space="preserve">
+    <value>Región:</value>
+  </data>
+  <data name="Subregion" xml:space="preserve">
+    <value>Subregión:</value>
+  </data>
+  <data name="Demonym" xml:space="preserve">
+    <value>Demoninación:</value>
+  </data>
+  <data name="GINI" xml:space="preserve">
+    <value>GINI:</value>
+  </data>
+  <data name="NativeName" xml:space="preserve">
+    <value>Nombre Nativo:</value>
+  </data>
+  <data name="NumericCode" xml:space="preserve">
+    <value>Código Numérico:</value>
+  </data>
+  <data name="CIOC" xml:space="preserve">
+    <value>CIOC:</value>
+  </data>
+  <data name="Borders" xml:space="preserve">
+    <value>Fronteras</value>
+  </data>
+  <data name="Currencies" xml:space="preserve">
+    <value>Monedas</value>
+  </data>
+  <data name="German" xml:space="preserve">
+    <value>Alemán:</value>
+  </data>
+  <data name="Spanish" xml:space="preserve">
+    <value>Español:</value>
+  </data>
+  <data name="French" xml:space="preserve">
+    <value>Francés:</value>
+  </data>
+  <data name="Japanese" xml:space="preserve">
+    <value>Japonés:</value>
+  </data>
+  <data name="Italian" xml:space="preserve">
+    <value>Italiano:</value>
+  </data>
+  <data name="Brazilian" xml:space="preserve">
+    <value>Brazileño:</value>
+  </data>
+  <data name="Portuguese" xml:space="preserve">
+    <value>Portugués:</value>
+  </data>
+  <data name="Dutch" xml:space="preserve">
+    <value>Holandés:</value>
+  </data>
+  <data name="Croatian" xml:space="preserve">
+    <value>Croata:</value>
+  </data>
+  <data name="Persian" xml:space="preserve">
+    <value>Persa:</value>
+  </data>
+  <data name="Translations" xml:space="preserve">
+    <value>Traducciones</value>
+  </data>
+  <data name="MyLanguages" xml:space="preserve">
+    <value>Idiomas</value>
+  </data>
+  <data name="Menu" xml:space="preserve">
+    <value>Menú</value>
+  </data>
+  <data name="MyAccount" xml:space="preserve">
+    <value>Cuenta</value>
+  </data>
+  <data name="Statics" xml:space="preserve">
+    <value>Estadísticas</value>
+  </data>
+  <data name="LogOut" xml:space="preserve">
+    <value>Cerrar sesión</value>
+  </data>
+  <data name="RegisterTitle" xml:space="preserve">
+    <value>Registrar Nuevo Usuario</value>
+  </data>
+  <data name="ChangeImage" xml:space="preserve">
+    <value>Toca la imagen para cambiarla.</value>
+  </data>
+  <data name="FirstNameLabel" xml:space="preserve">
+    <value>Nombres</value>
+  </data>
+  <data name="FirstNamePlaceHolder" xml:space="preserve">
+    <value>Ingresa nombres</value>
+  </data>
+  <data name="FirstNameValidation" xml:space="preserve">
+    <value>Debes ingresar nombre(s)</value>
+  </data>
+  <data name="LastNameLabel" xml:space="preserve">
+    <value>Apellidos</value>
+  </data>
+  <data name="LastNamePlaceHolder" xml:space="preserve">
+    <value>Ingresa apellidos</value>
+  </data>
+  <data name="LastNameValidation" xml:space="preserve">
+    <value>Debes ingresar apellido(s)</value>
+  </data>
+  <data name="PhoneLabel" xml:space="preserve">
+    <value>Teléfono</value>
+  </data>
+  <data name="PhonePlaceHolder" xml:space="preserve">
+    <value>Ingresa teléfono</value>
+  </data>
+  <data name="PhoneValidation" xml:space="preserve">
+    <value>Debes ingresar un teléfono</value>
+  </data>
+  <data name="ConfirmLabel" xml:space="preserve">
+    <value>Confirmación</value>
+  </data>
+  <data name="ConfirmPlaceHolder" xml:space="preserve">
+    <value>Ingresa la confimación de clave...</value>
+  </data>
+  <data name="ConfirmValidation" xml:space="preserve">
+    <value>Debes ingresar la confirmación de la clave</value>
+  </data>
+  <data name="EmailValidation2" xml:space="preserve">
+    <value>Debes ingresar un email válido</value>
+  </data>
+  <data name="PasswordValidation2" xml:space="preserve">
+    <value>La contraseña debe tener al menos seis (6) carácteres</value>
+  </data>
+  <data name="ConfirmValidation2" xml:space="preserve">
+    <value>La contraseña y la confirmación no concuerdan</value>
+  </data>
+  <data name="UserRegisteredMessage" xml:space="preserve">
+    <value>Usuario registrado, ya puedes ingresar con este email y clave asignada.</value>
+  </data>
+  <data name="SourceImageQuestion" xml:space="preserve">
+    <value>¿De donde quieres tomar la imagen?</value>
+  </data>
+  <data name="Cancel" xml:space="preserve">
+    <value>Cancelar</value>
+  </data>
+  <data name="FromGallery" xml:space="preserve">
+    <value>Desde la galería</value>
+  </data>
+  <data name="FromCamera" xml:space="preserve">
+    <value>Desde la cámara</value>
+  </data>
+  <data name="Save" xml:space="preserve">
+    <value>Guardar</value>
+  </data>
+  <data name="ChangePassword" xml:space="preserve">
+    <value>Cambiar Contraseña</value>
+  </data>
+  <data name="CurrentPassword" xml:space="preserve">
+    <value>Contraseña actual</value>
+  </data>
+  <data name="CurrentPasswordPlaceHolder" xml:space="preserve">
+    <value>Ingrese su contraseña actual...</value>
+  </data>
+  <data name="NewPassword" xml:space="preserve">
+    <value>Contraseña nueva</value>
+  </data>
+  <data name="NewPasswordPlaceHolder" xml:space="preserve">
+    <value>Ingrese la nueva contraseña</value>
+  </data>
+  <data name="ConnectionError1" xml:space="preserve">
+    <value>Verifica que tengas los parámetros de internet activados</value>
+  </data>
+  <data name="ConnectionError2" xml:space="preserve">
+    <value>Verifica que tengas conexión a internet</value>
+  </data>
+  <data name="LoginError" xml:space="preserve">
+    <value>Email o contraseña incorrectos</value>
+  </data>
+  <data name="ChagePasswordConfirm" xml:space="preserve">
+    <value>La contraseña fue cambiada exitosamente.</value>
+  </data>
+  <data name="PasswordError" xml:space="preserve">
+    <value>La contraseña actual es incorrecta</value>
+  </data>
+  <data name="ErrorChangingPassword" xml:space="preserve">
+    <value>La contraseña no pudo ser cambiada, por favor intenta más tarde</value>
+  </data>
+  <data name="MyProfiles" xml:space="preserve">
+    <value>Perfiles</value>
+  </data>
+  <data name="Settings" xml:space="preserve">
+    <value>Configuraciones</value>
+  </data>
+  <data name="Home" xml:space="preserve">
+    <value>Inicio</value>
+  </data>
+  <data name="Profiles" xml:space="preserve">
+    <value>Mis perfiles activos</value>
+  </data>
+  <data name="ActiveAccounts" xml:space="preserve">
+    <value>Mis cuentas activas</value>
+  </data>
+  <data name="AddAccount" xml:space="preserve">
+    <value>Agregar cuenta</value>
+  </data>
+  <data name="AddPBox" xml:space="preserve">
+    <value>Agregar perfiles a Box</value>
+  </data>
+  <data name="AddPSocialMedia" xml:space="preserve">
+    <value>Añadir perfil a red social</value>
+  </data>
+  <data name="BoxList" xml:space="preserve">
+    <value>Lista de Boxes</value>
+  </data>
+  <data name="BoxName" xml:space="preserve">
+    <value>Nombre de la Box</value>
+  </data>
+  <data name="Create" xml:space="preserve">
+    <value>Crear</value>
+  </data>
+  <data name="DefaultBox" xml:space="preserve">
+    <value>Box predeterminada</value>
+  </data>
+  <data name="EditProfileData" xml:space="preserve">
+    <value>Editar datos del perfil</value>
+  </data>
+  <data name="LoginSession" xml:space="preserve">
+    <value>Iniciar sesión</value>
+  </data>
+  <data name="MyAccounts" xml:space="preserve">
+    <value>Mis cuentas en</value>
+  </data>
+  <data name="NewBox" xml:space="preserve">
+    <value>Nueva Box</value>
+  </data>
+  <data name="NewProfile" xml:space="preserve">
+    <value>Nuevo perfil</value>
+  </data>
+  <data name="ProfileDetails" xml:space="preserve">
+    <value>Detalles del perfil</value>
+  </data>
+  <data name="ProfileName" xml:space="preserve">
+    <value>Nombre del perfil</value>
+  </data>
+  <data name="Update" xml:space="preserve">
+    <value>Actualizar</value>
+  </data>
+  <data name="User" xml:space="preserve">
+    <value>Usuario</value>
+  </data>
+  <data name="Value" xml:space="preserve">
+    <value>Valor</value>
+  </data>
+  <data name="AddProfiles" xml:space="preserve">
+    <value>Agregar perfiles</value>
+  </data>
+  <data name="CreateProfilePhone" xml:space="preserve">
+    <value>Crear perfil de teléfono</value>
+  </data>
+  <data name="NameProfile" xml:space="preserve">
+    <value>Nombre del perfil</value>
+  </data>
+  <data name="NumberPhone" xml:space="preserve">
+    <value>Celular</value>
+  </data>
+  <data name="ChooseTypeProfile" xml:space="preserve">
+    <value>Redes</value>
+  </data>
+  <data name="ProfilePhone" xml:space="preserve">
+    <value>Perfil de Teléfono</value>
+  </data>
+  <data name="NameValidation" xml:space="preserve">
+    <value>Debe ingresar un nombre</value>
+  </data>
+  <data name="NumberValidation" xml:space="preserve">
+    <value>Debe ingresar un número teléfonico</value>
+  </data>
+  <data name="PhoneValidation2" xml:space="preserve">
+    <value>El número de teléfono debe contener 10 dígitos</value>
+  </data>
+  <data name="DetailBox" xml:space="preserve">
+    <value>Detalles de Box</value>
+  </data>
+  <data name="CreateProfileEmail" xml:space="preserve">
+    <value>Crear perfil de correo electrónico</value>
+  </data>
+  <data name="PhoneProfileList" xml:space="preserve">
+    <value>Lista de perfiles de teléfonos</value>
+  </data>
+  <data name="EmailProfileList" xml:space="preserve">
+    <value>Lista de perfiles de correo</value>
+  </data>
+  <data name="Back" xml:space="preserve">
+    <value>Regresar</value>
+  </data>
+  <data name="DeleteBoxNotification" xml:space="preserve">
+    <value>Esta a punto de borrar la box definitivamente, ¿Desea continuar?</value>
+  </data>
+  <data name="No" xml:space="preserve">
+    <value>No</value>
+  </data>
+  <data name="Warning" xml:space="preserve">
+    <value>Advertencia</value>
+  </data>
+  <data name="Yes" xml:space="preserve">
+    <value>Si</value>
+  </data>
+  <data name="ExampleEmail" xml:space="preserve">
+    <value>ejemplo@dominio.com</value>
+  </data>
+  <data name="Link" xml:space="preserve">
+    <value>URL del perfil</value>
+  </data>
+  <data name="NProfilePlaceH" xml:space="preserve">
+    <value>Empresarial, Personal, Amigos.</value>
+  </data>
+  <data name="EditEmail" xml:space="preserve">
+    <value>Editar perfil de correo eléctronico</value>
+  </data>
+  <data name="EditPhone" xml:space="preserve">
+    <value>Editar perfil de teléfono</value>
+  </data>
+  <data name="FacebookProfileList" xml:space="preserve">
+    <value>Lista de perfiles de Facebook</value>
+  </data>
+  <data name="ReceivedBoxes" xml:space="preserve">
+    <value>Conexiones</value>
+  </data>
+  <data name="Delete" xml:space="preserve">
+    <value>Borrar</value>
+  </data>
+  <data name="LinkValidation" xml:space="preserve">
+    <value>Debe ingresar un url</value>
+  </data>
+  <data name="ProfileELabel" xml:space="preserve">
+    <value>Su usuario fue creado por una red social, para realizar algún cambio deberá realizarlo desde esa misma red social</value>
+  </data>
+  <data name="WhatsappProfileList" xml:space="preserve">
+    <value>Lista de perfiles de Whatsapp</value>
+  </data>
+  <data name="AddNetwork" xml:space="preserve">
+    <value>Añadir red</value>
+  </data>
+  <data name="EditNetwork" xml:space="preserve">
+    <value>Editar red</value>
+  </data>
+  <data name="NetworksList" xml:space="preserve">
+    <value>Lista de redes</value>
+  </data>
+  <data name="AskDeleteNetworkFromBox" xml:space="preserve">
+    <value>¿Desea borrar el perfil permanentemente de la Box?</value>
+  </data>
+  <data name="Close" xml:space="preserve">
+    <value>Cerrar</value>
+  </data>
+  <data name="NetworkAdded" xml:space="preserve">
+    <value>Red agregada a la Box </value>
+  </data>
+  <data name="Success" xml:space="preserve">
+    <value>¡Éxito!</value>
+  </data>
+  <data name="ErrorAddProfile" xml:space="preserve">
+    <value>Ha ocurrido un error, por favor intentelo más tarde</value>
+  </data>
+  <data name="WrongEmail" xml:space="preserve">
+    <value>Ya existe una cuenta con ese correo electrónico, inténtelo de nuevo con uno diferente.</value>
+  </data>
+  <data name="ProfileNull" xml:space="preserve">
+    <value>Aún no ha creado ningún perfil de este tipo</value>
+  </data>
+  <data name="NickName" xml:space="preserve">
+    <value>Nombre de usuario</value>
+  </data>
+  <data name="NickNamePH" xml:space="preserve">
+    <value>user</value>
+  </data>
+  <data name="EmptyBox" xml:space="preserve">
+    <value>Aún no tiene redes agregadas a ésta box</value>
+  </data>
+  <data name="Next" xml:space="preserve">
+    <value>Siguiente</value>
+  </data>
+  <data name="HaveWhats" xml:space="preserve">
+    <value>Este número tiene WhatsApp.</value>
+  </data>
+  <data name="Continue" xml:space="preserve">
+    <value>Continuar</value>
+  </data>
+  <data name="PutEmail" xml:space="preserve">
+    <value>Introduce tu correo.</value>
+  </data>
+  <data name="SendEmail" xml:space="preserve">
+    <value>Enviaremos un correo para que puedas iniciar sesión.</value>
+  </data>
+  <data name="QR" xml:space="preserve">
+    <value>Código QR</value>
+  </data>
+  <data name="Tag" xml:space="preserve">
+    <value>Configurar myTAG</value>
+  </data>
+  <data name="EscanQR" xml:space="preserve">
+    <value>Escanear QR</value>
+  </data>
+  <data name="MyQR" xml:space="preserve">
+    <value>Mi QR</value>
+  </data>
+  <data name="AndStick" xml:space="preserve">
+    <value>y pegalo a la parte posterior de tu teléfono.</value>
+  </data>
+  <data name="ConfigureTAG" xml:space="preserve">
+    <value>Configurar myTAG</value>
+  </data>
+  <data name="Push" xml:space="preserve">
+    <value>Presiona</value>
+  </data>
+  <data name="Store" xml:space="preserve">
+    <value>Tienda</value>
+  </data>
+  <data name="SureTAG" xml:space="preserve">
+    <value>Asegúrese de tener su myTAG a la mano.</value>
+  </data>
+  <data name="TakeinStore" xml:space="preserve">
+    <value>Si aún no lo tienes, cómpralo en</value>
+  </data>
+  <data name="ProfileMynfo" xml:space="preserve">
+    <value>Perfil de Mynfo</value>
+  </data>
+  <data name="QRForWhat" xml:space="preserve">
+    <value>Este código QR te permitirá compartir tu Box predeterminada en cuaquier navegador.</value>
+  </data>
+  <data name="QRMynfo" xml:space="preserve">
+    <value>Escanea un codigo QR de mynfo.</value>
+  </data>
+  <data name="ConfigSticker" xml:space="preserve">
+    <value>Preparando tu myTAG . . .</value>
+  </data>
+  <data name="AllConfigSticker" xml:space="preserve">
+    <value>Todas las Boxes que configures y manipules de ahora en adelante se veran reflejados en tu myTAG</value>
+  </data>
+  <data name="ConfigStickerRi" xml:space="preserve">
+    <value>¡myTAG configurado!</value>
+  </data>
+  <data name="HoldYourPhone" xml:space="preserve">
+    <value>Mantenga su teléfono cerca del myTAG.</value>
+  </data>
+  <data name="ReadyToScan" xml:space="preserve">
+    <value>Listo para escanear.</value>
+  </data>
+  <data name="AgeLabel" xml:space="preserve">
+    <value>Edad:</value>
+  </data>
+  <data name="AgePlaceHolder" xml:space="preserve">
+    <value>21 años</value>
+  </data>
+  <data name="Anios" xml:space="preserve">
+    <value> años</value>
+  </data>
+  <data name="HelpLabel" xml:space="preserve">
+    <value>¿Cómo leo otro myTAG?</value>
+  </data>
+  <data name="LocationLabel" xml:space="preserve">
+    <value>Ubicación:</value>
+  </data>
+  <data name="LocationPlaceHolder" xml:space="preserve">
+    <value>Apizaco, Tlaxcala, México.</value>
+  </data>
+  <data name="OccupationLabel" xml:space="preserve">
+    <value>Ocupación:</value>
+  </data>
+  <data name="OccupationPlaceHolder" xml:space="preserve">
+    <value>Ingeniero en tecnologías de la información.</value>
+  </data>
+  <data name="ViewsLabel" xml:space="preserve">
+    <value>Conexiones: </value>
+  </data>
+  <data name="Comments" xml:space="preserve">
+    <value>Comentarios</value>
+  </data>
+  <data name="SelectColor" xml:space="preserve">
+    <value>Selecciona un color</value>
+  </data>
+  <data name="Colorless" xml:space="preserve">
+    <value>Sin color</value>
+  </data>
+  <data name="Cyan" xml:space="preserve">
+    <value>Azul agua</value>
+  </data>
+  <data name="DarkBlue" xml:space="preserve">
+    <value>Azul oscuro</value>
+  </data>
+  <data name="DarkGreen" xml:space="preserve">
+    <value>Verde oscuro</value>
+  </data>
+  <data name="Fuchsia" xml:space="preserve">
+    <value>Fucsia</value>
+  </data>
+  <data name="Green" xml:space="preserve">
+    <value>Verde</value>
+  </data>
+  <data name="LightBlue" xml:space="preserve">
+    <value>Azul cielo</value>
+  </data>
+  <data name="Lilac" xml:space="preserve">
+    <value>Lila</value>
+  </data>
+  <data name="Orange" xml:space="preserve">
+    <value>Naranja</value>
+  </data>
+  <data name="Pink" xml:space="preserve">
+    <value>Rosa</value>
+  </data>
+  <data name="Purple" xml:space="preserve">
+    <value>Morado</value>
+  </data>
+  <data name="Red" xml:space="preserve">
+    <value>Rojo</value>
+  </data>
+  <data name="Yellow" xml:space="preserve">
+    <value>Dorado</value>
+  </data>
+  <data name="LadaValidation" xml:space="preserve">
+    <value>Debe agregar una lada valida.</value>
+  </data>
+  <data name="MessageWhatsApp" xml:space="preserve">
+    <value>¡Hola!, te conocí a través de mynfo, soy</value>
+  </data>
+  <data name="NoBoxesYet" xml:space="preserve">
+    <value>No existen boxes creadas aún</value>
+  </data>
+  <data name="ScanTAGFirst" xml:space="preserve">
+    <value>¡Primero escanea este myTAG para escribirlo!</value>
+  </data>
+  <data name="TAGUsed" xml:space="preserve">
+    <value>¡Este myTAG esta vinculado con otro usuario!</value>
+  </data>
+  <data name="UserNotFound" xml:space="preserve">
+    <value>El usuario no es valido</value>
+  </data>
+  <data name="UserWithoutBoxes" xml:space="preserve">
+    <value>El usuario no tiene Boxes</value>
+  </data>
+  <data name="HowMynfoWorks" xml:space="preserve">
+    <value>¿Cómo funciona mynfo?</value>
+  </data>
+  <data name="DoNotShowAgain" xml:space="preserve">
+    <value>No mostrar de nuevo</value>
+  </data>
+  <data name="Walktrough" xml:space="preserve">
+    <value>Te presentamos un pequeño paseo por la app</value>
+  </data>
+  <data name="Welcome" xml:space="preserve">
+    <value>Bienvenido a mynfo</value>
+  </data>
+  <data name="Step" xml:space="preserve">
+    <value>Paso</value>
+  </data>
+  <data name="Step1" xml:space="preserve">
+    <value>Presiona el botón de Configurar myTAG, espera a que tu teléfono deje de vibrar y veas la pantalla de "listo para escanear" y junta tu myTAG a la parte trasera superior de tu teléfono.</value>
+  </data>
+  <data name="Step2" xml:space="preserve">
+    <value>Mantén tu myTAG presionado a tu teléfono hasta que vibre otra vez y visualices la pantalla de confirmación. NOTA: La zona de tu teléfono a la que tienes que acercar tu myTAG para configurarlo puede variar.</value>
+  </data>
+  <data name="Step3" xml:space="preserve">
+    <value>Acerca tu myTAG a la parte superior trasera de tu celular</value>
+  </data>
+  <data name="Step4" xml:space="preserve">
+    <value>Mantén tu myTAG pegado al celular hasta que el lector NFC te muestre un mensaje de éxito</value>
+  </data>
+  <data name="Step5" xml:space="preserve">
+    <value>Cuando se cierre el popup ya puedes despegar tu myTAG</value>
+  </data>
+  <data name="Step6" xml:space="preserve">
+    <value>¡Tu myTAG está listo! Puedes pegarlo en tu celular o donde tu prefieras y empezar a compartir tu información</value>
+  </data>
+  <data name="TAGInstructions" xml:space="preserve">
+    <value>Lee los dos pasos antes de configurar tu myTAG</value>
+  </data>
+</root>

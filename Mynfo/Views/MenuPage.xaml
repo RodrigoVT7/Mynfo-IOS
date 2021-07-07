@@ -1,0 +1,100 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Mynfo.Views.MenuPage"
+             BindingContext = "{Binding Main, Source={StaticResource Locator}}"
+             BackgroundColor="{AppThemeBinding Light={StaticResource Menu_BackgroundColorLight}, Dark={StaticResource Menu_BackgroundColorDark}}"
+             Title = "☰">
+    <ContentPage.Content>
+        <StackLayout
+            Padding = "20,30,5,5">
+            <!--<controls:CircleImage
+                Aspect="AspectFill"
+                Margin="40,0,40,0"
+                HeightRequest = "180"
+                Source = "{Binding User.ImageFullPath}">
+            </controls:CircleImage>-->
+            <Frame 
+                BorderColor="{StaticResource MainColor}"
+                WidthRequest="150"
+                HeightRequest="320" 
+                CornerRadius="75"
+                IsClippedToBounds="True"
+                HasShadow="False"
+                Padding="0"
+                VerticalOptions="Center" 
+                HorizontalOptions="Center"
+                Margin="20">
+                <Image
+                    Aspect="AspectFill"
+                    WidthRequest="1000"
+                    HeightRequest="1000"
+                    Source = "{Binding User.ImageFullPath}"/>
+            </Frame>
+            <Label 
+                FontSize = "26"
+                FontAttributes = "Bold"
+                HorizontalOptions = "Center"
+                HorizontalTextAlignment="Center"
+                Padding = "5"
+                Text = "{Binding User.FullName, StringFormat = '{0}'}"
+                TextColor = "{StaticResource MainColor}" />
+            <StackLayout
+                Orientation="Horizontal"
+                VerticalOptions = "Center"
+                HorizontalOptions = "CenterAndExpand"
+                Margin="0,30,0,30">
+                
+                <Label
+                    FontAttributes="Bold"
+                    FontSize="Large"
+                    HorizontalOptions = "StartAndExpand"
+                    VerticalOptions = "CenterAndExpand"
+                    TextColor = "{AppThemeBinding Light={StaticResource Light_FontColor}, Dark={StaticResource Dark_FontColor}}"
+                    x:Name="TagLabel"/>
+                <Switch
+                    Toggled="OnToggled"
+                    HeightRequest="25"
+                    IsToggled = "{Binding User.Share, Mode = TwoWay}"
+                    HorizontalOptions = "Center"
+                    x:Name="TagSwitch"/>
+            </StackLayout >
+            <ListView 
+                BackgroundColor="{AppThemeBinding Light={StaticResource Menu_BackgroundColorLight}, Dark={StaticResource Menu_BackgroundColorDark}}"
+                ItemsSource = "{Binding Menus}"
+                HasUnevenRows = "True"
+                SeparatorVisibility = "None">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Grid
+                                Margin="10">
+                                <Grid.GestureRecognizers>
+                                    <TapGestureRecognizer Command = "{Binding NavigateCommand}" />
+                                </Grid.GestureRecognizers>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width = "*"></ColumnDefinition>
+                                    <ColumnDefinition Width = "2*"></ColumnDefinition>
+                                </Grid.ColumnDefinitions>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height = "Auto"></RowDefinition>
+                                </Grid.RowDefinitions>
+                                <Image 
+                                    Grid.Column = "0"
+                                    HeightRequest = "50"
+                                    Source = "{Binding Icon}"
+                                    WidthRequest = "50" />
+                                <Label 
+                                    FontSize = "17"
+                                    Grid.Column = "1"
+                                    Text = "{Binding Title}"
+                                    TextColor="{AppThemeBinding Light={StaticResource Light_FontColor}, Dark={StaticResource Dark_FontColor}}"
+                                    VerticalOptions = "Center" />
+                            </Grid>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

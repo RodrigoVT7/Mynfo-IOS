@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<popup:PopupPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:popup="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup"
+             x:Class="Mynfo.Views.GifPage"
+             BackgroundColor="Transparent"
+             BindingContext="{Binding Main, Source={StaticResource Locator}}">
+    <ContentPage.Content>
+        <Frame
+            BackgroundColor="{AppThemeBinding Light={StaticResource BackgroundColorLigth}, Dark={StaticResource BackgroundColorDark}}"
+            BindingContext="{Binding GIF}"
+            CornerRadius="30"
+            HasShadow="True"
+            Margin="40,10,40,10">
+            <Grid
+                HorizontalOptions="CenterAndExpand"
+                VerticalOptions="CenterAndExpand">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+                <Image
+                    BackgroundColor="Transparent"
+                    Grid.Row = "0"
+                    HorizontalOptions="CenterAndExpand"
+                    IsAnimationPlaying="true"
+                    Margin="-20"
+                    Source="{Binding GitImage}"
+                    VerticalOptions="CenterAndExpand"
+                    x:Name="ImgGIF"/>
+                <ActivityIndicator
+                    Grid.Row = "0"
+                    IsRunning = "False"
+                    HorizontalOptions = "CenterAndExpand"
+                    VerticalOptions="CenterAndExpand">
+                </ActivityIndicator>
+            </Grid>
+        </Frame>
+    </ContentPage.Content>
+</popup:PopupPage>

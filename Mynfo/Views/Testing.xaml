@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Mynfo.Views.Testing"
+             BindingContext = "{Binding Main, Source={StaticResource Locator}}">
+    <ContentPage.Content>
+        <Grid
+            BindingContext="{Binding Testing}">
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+            <Button
+                Grid.Row="0"
+                Grid.Column="0"
+                Text="Perro"
+                x:Name="AbrirPopUp1"/>
+            <Button
+                Grid.Row="0"
+                Grid.Column="1"
+                Text="Gato"
+                x:Name="AbrirPopUp2"/>
+            <Button
+                Grid.Row="0"
+                Grid.Column="2"
+                Text="Jirafa"
+                x:Name="AbrirPopUp3"/>
+            <Button
+                Grid.Row="1"
+                Grid.Column="0"
+                Text="Serpiente"
+                x:Name="AbrirPopUp4"/>
+            <Button
+                Grid.Row="1"
+                Grid.Column="1"
+                Text="Foca"
+                x:Name="AbrirPopUp5"/>
+            <Button
+                Grid.Row="1"
+                Grid.Column="2"
+                Text="Ratón"
+                x:Name="AbrirPopUp6"/>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

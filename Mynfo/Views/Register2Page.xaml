@@ -1,0 +1,170 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:i18n = "clr-namespace:Mynfo.Helpers"
+             x:Class="Mynfo.Views.Register2Page"
+             BackgroundColor="{AppThemeBinding Light={StaticResource BackgroundColorLigth}, Dark={StaticResource BackgroundColorDark}}"
+             BindingContext = "{Binding Main, Source={StaticResource Locator}}">
+    <NavigationPage.TitleView>
+        <Grid>
+            <ImageButton
+                BackgroundColor = "Transparent"
+                Command="{Binding BackHomeCommand}"
+                Margin = "0,0,70,0"
+                HorizontalOptions = "Center"
+                VerticalOptions = "Center"
+                WidthRequest = "100"
+                x:Name="Logosuperior"/>
+        </Grid>
+    </NavigationPage.TitleView>
+    <ContentPage.Content>
+        <Grid
+            BindingContext="{Binding Register2}">
+            <ScrollView>
+                <Grid
+                    Padding="15">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="60"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="60"/>
+                        <RowDefinition />
+                    </Grid.RowDefinitions>
+                    <Label
+                        FontAttributes="Bold"
+                        FontSize="30"
+                        Grid.Row="0"
+                        HorizontalOptions="Center"
+                        Text="{i18n:Translate Register}"
+                        TextColor="{StaticResource MainColor}"
+                        VerticalOptions="Center"/>
+                    <StackLayout
+                        Grid.Row="1"
+                        VerticalOptions="Center">
+                        <Label
+                            FontSize = "18"
+                            HorizontalOptions="CenterAndExpand"
+                            TextColor="{StaticResource MainColor}"
+                            Text="{i18n:Translate EMail}"
+                            VerticalOptions="Center"/>
+                        <Entry
+                            BackgroundColor="Transparent"
+                            ClearButtonVisibility="WhileEditing"
+                            HeightRequest="40"
+                            HorizontalTextAlignment="Center"
+                            HorizontalOptions="CenterAndExpand"
+                            Margin="0,0,0,0"
+                            Text="{Binding Email}"
+                            TextColor="{AppThemeBinding Light={StaticResource Light_FontColor}, Dark={StaticResource Dark_FontColor}}"
+                            VerticalTextAlignment="Center"
+                            WidthRequest="300"/>
+                    </StackLayout>
+                    <StackLayout
+                        Grid.Row="2"
+                        VerticalOptions="Center">
+                        <Label
+                            FontSize = "18"
+                            HorizontalOptions="CenterAndExpand"
+                            TextColor="{StaticResource MainColor}"
+                            Text="{i18n:Translate Password}"
+                            VerticalOptions="Center"/>
+                        <Entry
+                            BackgroundColor="Transparent"
+                            ClearButtonVisibility="WhileEditing"
+                            HeightRequest="40"
+                            IsPassword="True"
+                            HorizontalTextAlignment="Center"
+                            HorizontalOptions="CenterAndExpand"
+                            Margin="0,0,0,0"
+                            Text="{Binding Password}"
+                            TextColor="{AppThemeBinding Light={StaticResource Light_FontColor}, Dark={StaticResource Dark_FontColor}}"
+                            VerticalTextAlignment="Center"
+                            WidthRequest="300"/>
+                    </StackLayout>
+                    <StackLayout
+                        Grid.Row="3"
+                        VerticalOptions="Center">
+                        <Label
+                            FontSize = "18"
+                            HorizontalOptions="CenterAndExpand"
+                            TextColor="{StaticResource MainColor}"
+                            Text="{i18n:Translate ConfirmLabel}"
+                            VerticalOptions="Center"/>
+                        <Entry
+                            BackgroundColor="Transparent"
+                            ClearButtonVisibility="WhileEditing"
+                            HeightRequest="40"
+                            IsPassword="True"
+                            HorizontalTextAlignment="Center"
+                            HorizontalOptions="CenterAndExpand"
+                            Margin="0,0,0,0"
+                            Text="{Binding Confirm}"
+                            TextColor="{AppThemeBinding Light={StaticResource Light_FontColor}, Dark={StaticResource Dark_FontColor}}"
+                            VerticalTextAlignment="Center"
+                            WidthRequest="300"/>
+                    </StackLayout>
+                    <StackLayout
+                        Grid.Row="4"
+                        VerticalOptions="Center">
+                        <Label
+                            FontSize = "18"
+                            HorizontalOptions="CenterAndExpand"
+                            TextColor="{StaticResource MainColor}"
+                            Text="{i18n:Translate NumberPhone}"
+                            VerticalOptions="Center"/>
+                        <Entry
+                            BackgroundColor="Transparent"
+                            ClearButtonVisibility="WhileEditing"
+                            HeightRequest="40"
+                            HorizontalTextAlignment="Center"
+                            HorizontalOptions="CenterAndExpand"
+                            Keyboard = "Telephone"
+                            Margin="0,0,0,0"
+                            MaxLength="10"
+                            Text="{Binding Number}"
+                            TextColor="{AppThemeBinding Light={StaticResource Light_FontColor}, Dark={StaticResource Dark_FontColor}}"
+                            VerticalTextAlignment="Center"
+                            WidthRequest="300"/>
+                    </StackLayout>
+                    <StackLayout
+                        Grid.Row="5"
+                        Orientation="Horizontal"
+                        VerticalOptions="Center">
+                        <CheckBox
+                            IsChecked="{Binding IsCheck}"/>
+                        <Image
+                            BackgroundColor="Transparent"
+                            HeightRequest="25"
+                            Source="whatsapp2"
+                            WidthRequest="25"/>
+                        <Label
+                            Text="{i18n:Translate HaveWhats}"
+                            TextColor="{AppThemeBinding Light={StaticResource Light_FontColor}, Dark={StaticResource Dark_FontColor}}"
+                            VerticalOptions="Center"/>
+                    </StackLayout>
+                </Grid>
+            </ScrollView>
+            <Button 
+                BackgroundColor="{StaticResource MainColor}"
+                BorderRadius="23"
+                Command = "{Binding RegisterCommand}"
+                Grid.Row ="0"
+                HeightRequest="50"
+                HorizontalOptions="Fill"
+                Margin="15"
+                Text = "{i18n:Translate Save}"
+                TextColor="{AppThemeBinding Light={StaticResource Dark_FontColor}, Dark={StaticResource Light_FontColor}}"
+                VerticalOptions="EndAndExpand"
+                x:Name="Save"/>
+            <ActivityIndicator
+                Grid.Row ="0"
+                HorizontalOptions="Center"
+                IsRunning="{Binding IsRunning}"
+                VerticalOptions="Center">
+            </ActivityIndicator>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

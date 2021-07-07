@@ -1,0 +1,109 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             xmlns:zxcm="clr-namespace:ZXing.Common;assembly=zxing.portable" 
+             xmlns:zxing="clr-namespace:ZXing.Net.Mobile.Forms;assembly=ZXing.Net.Mobile.Forms"
+             xmlns:i18n="clr-namespace:Mynfo.Helpers" 
+             x:Class="Mynfo.Views.MyQRPage"
+             BackgroundColor="{AppThemeBinding Light={StaticResource BackgroundColorLigth}, Dark={StaticResource BackgroundColorDark}}"
+             BindingContext = "{Binding Main, Source={StaticResource Locator}}">
+    <ContentPage.Content>
+        <StackLayout
+            Margin="20">
+            <Frame
+                BackgroundColor="{AppThemeBinding Light={StaticResource Menu_BackgroundColorLight}, Dark=#949fb0}"
+                CornerRadius="50"
+                Margin="15">
+                <Grid
+                    BindingContext="{Binding MyQR}">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="20"/>
+                        <RowDefinition Height="80"/>
+                        <RowDefinition Height="280"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                    </Grid.ColumnDefinitions>
+                    <!-- Info de usuario-->
+                    <StackLayout
+                        Grid.Row = "1">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="50*"/>
+                                <ColumnDefinition Width="50*"/>
+                            </Grid.ColumnDefinitions>
+                            <Frame 
+                                Grid.Column="0"
+                                BorderColor="{StaticResource MainColor}"
+                                IsClippedToBounds="True"
+                                HasShadow="False"
+                                Padding="0"
+                                HeightRequest="100"
+                                WidthRequest="80"
+                                CornerRadius="41"
+                                Margin="5,0,5,0"
+                                VerticalOptions="Center" 
+                                HorizontalOptions="Center">
+                                <Image
+                                    Aspect="AspectFill"
+                                    WidthRequest="1000"
+                                    HeightRequest="1000"
+                                    Source = "{Binding ImageSource}"/>
+                            </Frame>
+                            <StackLayout
+                                Grid.Column="1"
+                                HorizontalOptions="Start"
+                                Orientation="Vertical"
+                                VerticalOptions="Center">
+                                    <Label
+                                    FontAttributes="Bold"
+                                    FontSize="21"
+                                    HorizontalTextAlignment="Center"
+                                    Text="{Binding UserLocal.FullName}"
+                                    TextColor="{AppThemeBinding Light={StaticResource MainColor}, Dark={StaticResource Dark_FontColor}}"
+                                    VerticalTextAlignment="Center"
+                                    WidthRequest="150"/>
+                                <Label
+                                    FontSize="13"
+                                    Text="{i18n:Translate ProfileMynfo}"
+                                    HorizontalTextAlignment="Center"
+                                    TextColor="{AppThemeBinding Light={StaticResource Light_FontColor}, Dark={StaticResource Dark_FontColor}}"
+                                    VerticalTextAlignment="Center"/>
+                            </StackLayout>
+                        </Grid>
+                    </StackLayout>
+                    <!-- QR -->
+                    <StackLayout 
+                        HorizontalOptions="Center" 
+                        Grid.Row="2"
+                        Margin="0,10,0,0"
+                        VerticalOptions="Center">
+                        <zxing:ZXingBarcodeImageView 
+                            BackgroundColor="Transparent"
+                            WidthRequest="200" 
+                            HeightRequest="200" 
+                            BarcodeValue="{Binding User}" 
+                            BarcodeFormat="QR_CODE">
+                            <zxing:ZXingBarcodeImageView.BarcodeOptions>
+                                <zxcm:EncodingOptions 
+                                    Width="300" 
+                                    Height="300" />
+                            </zxing:ZXingBarcodeImageView.BarcodeOptions>
+                        </zxing:ZXingBarcodeImageView>
+                    </StackLayout>
+                    <StackLayout
+                        Grid.Row="3"
+                        HorizontalOptions="CenterAndExpand"
+                        Margin="15">
+                        <Label
+                            FontSize="10"
+                            HorizontalTextAlignment="Center"
+                            Text="{i18n:Translate QRForWhat}"
+                            TextColor="{AppThemeBinding Light={StaticResource Light_FontColor}, Dark={StaticResource Light_FontColor}}"
+                            VerticalTextAlignment="Center"/>
+                    </StackLayout>
+                </Grid>
+            </Frame>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

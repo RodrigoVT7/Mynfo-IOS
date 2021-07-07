@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<popup:PopupPage 
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:popup="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="Mynfo.Views.PopupExample">
+    <StackLayout Padding="15">
+        <Frame Margin="25">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition />
+                    <RowDefinition />
+                </Grid.RowDefinitions>
+                <Label 
+                x:Name="etiqueta1"
+                    Grid.Row="0"/>
+                <ImageButton 
+                Source="plus"
+                    Grid.Row="1"
+                    Clicked="gototest"/>
+            </Grid>
+        </Frame>
+    </StackLayout>
+</popup:PopupPage>

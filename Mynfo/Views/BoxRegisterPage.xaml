@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:i18n="clr-namespace:Mynfo.Helpers"
+             x:Class="Mynfo.Views.BoxRegisterPage"
+             BackgroundColor="{AppThemeBinding Light={StaticResource BackgroundColorLigth}, Dark={StaticResource BackgroundColorDark}}"
+             BindingContext = "{Binding Main, Source = {StaticResource Locator}}">
+    <NavigationPage.TitleView>
+        <Grid
+            BindingContext="{Binding BoxRegister}">
+            <ImageButton
+                BackgroundColor = "Transparent"
+                Command="{Binding BackHomeCommand}"
+                Grid.ColumnSpan = "3"
+                Margin = "0,0,70,0"
+                HorizontalOptions = "Center"
+                VerticalOptions = "Center"
+                WidthRequest = "100"
+                x:Name="Logosuperior"/>
+        </Grid>
+    </NavigationPage.TitleView>
+    <ContentPage.Content>
+        <ScrollView
+            BindingContext = "{Binding BoxRegister}">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height = "160"/>
+                    <RowDefinition Height = "40"/>
+                    <RowDefinition Height = "60"/>
+                    <RowDefinition Height = "50"/>
+                </Grid.RowDefinitions>
+                <Label 
+                    FontSize = "23" 
+                    Grid.Row = "1"
+                    HorizontalOptions = "Center"
+                    Text = "{i18n:Translate BoxName}" 
+                    TextColor="{AppThemeBinding Light={StaticResource Light_FontColor}, Dark={StaticResource Dark_FontColor}}"
+                    VerticalOptions = "Center" />
+                <Entry 
+                    FontSize = "21"
+                    Grid.Row = "2"
+                    HeightRequest = "80"
+                    HorizontalOptions = "Center"
+                    HorizontalTextAlignment = "Center"
+                    BackgroundColor="Transparent"
+                    MaxLength="20"
+                    Text = "{Binding Name}"
+                    TextColor="{AppThemeBinding Light={StaticResource Light_FontColor}, Dark={StaticResource Dark_FontColor}}"
+                    VerticalOptions = "CenterAndExpand"
+                    WidthRequest = "300">
+                    <Entry.Keyboard>
+                        <Keyboard x:FactoryMethod="Create">
+                            <x:Arguments>
+                                <KeyboardFlags>CapitalizeWord</KeyboardFlags>
+                            </x:Arguments>
+                        </Keyboard>
+                    </Entry.Keyboard>
+                </Entry>
+                <Button 
+                    BackgroundColor = "{StaticResource MainColor}"
+                    BorderRadius = "23"
+                    Command = "{Binding SaveBoxCommand}"
+                    Grid.Row = "3"
+                    HeightRequest = "40"
+                    HorizontalOptions = "Center"
+                    Text = "{i18n:Translate Create}"
+                    TextColor = "{AppThemeBinding Light={StaticResource Dark_FontColor}, Dark={StaticResource Light_FontColor}}"
+                    VerticalOptions = "End"
+                    WidthRequest = "100"/>
+                <ActivityIndicator
+                    IsRunning = "{Binding IsRunning}"
+                    VerticalOptions = "CenterAndExpand">
+                </ActivityIndicator>
+            </Grid>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

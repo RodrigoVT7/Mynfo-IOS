@@ -1,0 +1,261 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Mynfo.Views.HomePage"
+             xmlns:i18n="clr-namespace:Mynfo.Helpers"
+             BackgroundColor="{AppThemeBinding Light={StaticResource BackgroundColorLigth}, Dark={StaticResource BackgroundColorDark}}"
+             BindingContext="{Binding Main, Source={StaticResource Locator}}">
+    <ContentPage.Content>
+        <Grid>
+            <Grid BindingContext = "{Binding Home}">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="35*"/>
+                    <RowDefinition Height="65*"/>
+                </Grid.RowDefinitions>
+                <!-- Información del usuario -->
+                <StackLayout
+                    Grid.Row="0">
+                    <RefreshView
+                    IsRefreshing="{Binding IsRefreshing}"
+                    Command="{Binding RefreshCommand}"
+                    RefreshColor="Orange">
+                        <ScrollView>
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="90*"/>
+                                    <RowDefinition Height="10*"/>
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="40*"/>
+                                    <ColumnDefinition Width="60*"/>
+                                </Grid.ColumnDefinitions>
+                                <!-- Imágen del usuario -->
+                                <StackLayout
+                                Grid.Column="0"
+                                Grid.Row="0">
+                                    <Frame BorderColor="{StaticResource MainColor}"
+                                    WidthRequest="100"
+                                    HeightRequest="100" 
+                                    CornerRadius="50"
+                                    IsClippedToBounds="True"
+                                    HasShadow="False"
+                                    Padding="0"
+                                    VerticalOptions="Center" 
+                                    HorizontalOptions="Center"
+                                    Margin="20">
+                                        <Image
+                                        Aspect="AspectFill"
+                                        WidthRequest="1000"
+                                        HeightRequest="1000"
+                                        Source = "{Binding ImageSource}"/>
+                                    </Frame>
+                                </StackLayout>
+                                <!-- Datos del usuario -->
+                                <StackLayout
+                                Grid.Column="1"
+                                Grid.Row="0"
+                                Margin="0,10,0,0">
+                                    <Grid>
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="20*"/>
+                                            <RowDefinition Height="20*"/>
+                                            <RowDefinition Height="20*"/>
+                                            <RowDefinition Height="20*"/>
+                                            <RowDefinition Height="20*"/>
+                                        </Grid.RowDefinitions>
+                                        <!-- Nombre -->
+                                        <Label 
+                                        FontAttributes="Bold"
+                                        FontSize="Title"
+                                        Text="{Binding User.FirstName}"
+                                        TextColor="{StaticResource MainColor}"
+                                        Grid.Row="0"/>
+                                        <!-- Edad -->
+                                        <Label
+                                        Grid.Row="1"
+                                        FontSize="15"
+                                        VerticalOptions="Center"
+                                        IsVisible="{Binding User.Edad}"
+                                        TextColor="{AppThemeBinding Light={StaticResource Light_FontColor},
+                                        Dark={StaticResource Dark_FontColor}}">
+                                            <Label.FormattedText>
+                                                <FormattedString>
+                                                    <Span Text="{Binding User.Edad}"></Span>
+                                                    <Span Text="{i18n:Translate Anios}"></Span>
+                                                </FormattedString>
+                                            </Label.FormattedText>
+                                        </Label>
+                                        <!-- Ubicación -->
+                                        <Label 
+                                        Grid.Row="2"
+                                        FontSize="15"
+                                        Text="{Binding User.Ubicacion}"
+                                        VerticalOptions="Center"
+                                        TextColor="{AppThemeBinding Light={StaticResource Light_FontColor},
+                                        Dark={StaticResource Dark_FontColor}}"
+                                        x:Name="UbicacionLabel"/>
+                                        <!-- Ocupación -->
+                                        <Label  
+                                        Grid.Row="3"
+                                        FontSize="15"
+                                        Text="{Binding User.Ocupacion}"
+                                        VerticalOptions="Center"
+                                        TextColor="{AppThemeBinding Light={StaticResource Light_FontColor},
+                                        Dark={StaticResource Dark_FontColor}}"
+                                        x:Name="OccupationLabel"/>
+                                        <!-- Número de conexiones -->
+                                        <Label
+                                        Grid.Row="4"
+                                        VerticalOptions="End">
+                                            <Label.FormattedText>
+                                                <FormattedString>
+                                                    <Span 
+                                                    Text="{i18n:Translate ViewsLabel}" 
+                                                    TextColor="{StaticResource MainColor}" 
+                                                    FontAttributes="Bold"
+                                                    FontSize="18"/>
+                                                    <Span 
+                                                    Text="{Binding ViewsByUser}"
+                                                    TextColor="{AppThemeBinding Light={StaticResource Light_FontColor}, 
+                                                    Dark={StaticResource Dark_FontColor}}"
+                                                    FontSize="15"/>
+                                                </FormattedString>
+                                            </Label.FormattedText>
+                                        </Label>
+                                    </Grid>
+                                </StackLayout>
+                                <!-- Línea para separar -->
+                                <StackLayout
+                                Grid.ColumnSpan="2"
+                                Grid.Column="0"
+                                Grid.Row="1">
+                                    <Line
+                                    HeightRequest="1"
+                                    BackgroundColor="{AppThemeBinding Light=#d8dce3, 
+                                    Dark={StaticResource Menu_BackgroundColorDark}}"
+                                    Margin="30,0,30,27"/>
+                                </StackLayout>
+                            </Grid>
+                        </ScrollView>
+                    </RefreshView>
+                </StackLayout>
+                <!-- Boxes -->
+                <StackLayout
+                Grid.Row="1">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="50*"/>
+                            <RowDefinition Height="40*"/>
+                            <RowDefinition Height="10*"/>
+                        </Grid.RowDefinitions>
+                        <!-- Box predeterminada -->
+                        <StackLayout
+                        Grid.Row="0">
+                            <CollectionView 
+                            ItemsSource="{Binding Box}"
+                            SelectionChanged="OnCollectionViewSelectionChanged"
+                            SelectionMode="Single">
+                                <CollectionView.ItemsLayout>
+                                    <GridItemsLayout 
+                                    Orientation="Vertical"
+                                    Span="1" />
+                                </CollectionView.ItemsLayout>
+                                <CollectionView.ItemTemplate>
+                                    <DataTemplate>
+                                        <Grid Padding="10">
+                                            <StackLayout
+                                            HorizontalOptions="Center">
+                                                <Frame
+                                                BackgroundColor="{Binding ColorBox}"
+                                                CornerRadius="25"
+                                                HasShadow="false"
+                                                HeightRequest="80"
+                                                IsVisible="{Binding IsNull}"
+                                                WidthRequest="80"/>
+                                                <Label
+                                                FontAttributes="Bold"
+                                                FontSize="20"
+                                                HorizontalTextAlignment="Center"
+                                                Text="{Binding Name}"
+                                                TextColor="{AppThemeBinding Light={StaticResource Light_FontColor}, Dark={StaticResource Dark_FontColor}}"/>
+                                            </StackLayout>
+                                        </Grid>
+                                    </DataTemplate>
+                                </CollectionView.ItemTemplate>
+                                <CollectionView.EmptyView>
+                                    <ContentView>
+                                        <StackLayout 
+                                        HorizontalOptions="CenterAndExpand"
+                                        VerticalOptions="CenterAndExpand">
+                                            <Label 
+                                            IsVisible="{Binding IsNull}"
+                                            Text="{i18n:Translate NoBoxesYet}"/>
+                                        </StackLayout>
+                                    </ContentView>
+                                </CollectionView.EmptyView>
+                            </CollectionView>
+                        </StackLayout>
+                        <!-- Boxes -->
+                        <StackLayout
+                        Grid.Row="1">
+                            <CollectionView  
+                            ItemsSource="{Binding BoxNoDefault}"
+                            SelectionMode="Single"
+                            SelectedItem="{Binding selectedItem}"
+                            SelectionChanged="OnCollectionViewSelectionChanged"
+                            x:Name="BoxCollectionView">
+                                <CollectionView.ItemsLayout>
+                                    <GridItemsLayout 
+                                    Orientation="Vertical"
+                                    Span="3" />
+                                </CollectionView.ItemsLayout>
+                                <CollectionView.ItemTemplate>
+                                    <DataTemplate>
+                                        <Grid Padding="10">
+                                            <StackLayout
+                                            HorizontalOptions="CenterAndExpand">
+                                                <Frame
+                                                BackgroundColor="{Binding ColorBox}"
+                                                CornerRadius="15"
+                                                HasShadow="False"
+                                                HeightRequest="45"
+                                                IsVisible="{Binding MoreOne}"
+                                                WidthRequest="45">
+                                                </Frame>
+                                                <Label
+                                                FontSize="12"
+                                                HorizontalTextAlignment="Center"
+                                                Text="{Binding Name}"
+                                                TextColor="{AppThemeBinding Light={StaticResource Light_FontColor}, Dark={StaticResource Dark_FontColor}}"/>
+                                            </StackLayout>
+                                        </Grid>
+                                    </DataTemplate>
+                                </CollectionView.ItemTemplate>
+                            </CollectionView>
+                            <!--Carga-->
+                            <ActivityIndicator
+                            IsRunning="{Binding IsRunning}"
+                            VerticalOptions="Center">
+                            </ActivityIndicator>
+                        </StackLayout>
+                        <!-- Botón de más -->
+                        <StackLayout
+                        Grid.Row="2">
+                        </StackLayout>
+                    </Grid>
+                </StackLayout>
+            </Grid>
+            <ImageButton
+                    BackgroundColor = "Transparent"
+                    Clicked = "CreateBox_Clicked"
+                    HeightRequest = "50"
+                    HorizontalOptions ="CenterAndExpand"
+                    IsVisible="{Binding VisibleButton}"
+                    Margin="15"
+                    Source = "Plus"
+                    VerticalOptions="End"
+                    WidthRequest = "50"
+                    x:Name="CreateBoxBtn"/>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>
